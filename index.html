@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Red+Hat+Text:ital,wght@0,400..700;1,300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product list with cart</title>
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+<main>
+  <div class="products-container">
+    <h1>Desserts</h1>
+    <div class="menu-container">
+      <div id="menu-items">
+      </div>
+    </div>
+      <div class="cart-container" id="cart-container">
+        <div class="cart">
+          <h2 id="your-cart">Your Cart</h2>
+          <div class="cart-items" id="cart">
+          </div>
+          <div class="empty-cart" id="empty-cart">
+            <div class="image-container">
+              <img src="assets/images/illustration-empty-cart.svg" alt="empty-cart">
+            </div>
+            <p>Your added items will appear here</p>
+          </div>
+          <div class="total" id="total-price">
+          </div>
+          <div class="carbon-text" id="carbon-text">
+            <span class="carbon-wrapper">
+              <img src="assets/images/icon-carbon-neutral.svg" alt="carbon-icon">
+              <p>this is a <strong>carbon-neutral</strong> delivery</p>
+            </span>
+          </div>
+          <div class="cta-confirm">
+            <p onclick="showModal()">Confirm Order</p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-container" id="modal-container" onclick="closeModal()">
+    <div id="cart-modal" class="cart-modal" onclick="event.stopPropagation();">
+      <img class="checked-confirmed" src="assets/images/icon-order-confirmed.svg" alt="confirm icon">
+      <div class="header-wrapper">
+        <h1>Order Confirmed</h1>
+        <p>We hope you enjoy your food!</p>
+      </div>
+      <div class="modal-items" id="modal-items">
+      </div>
+      <div class="modal-total" id="modal-total">
+      </div>
+      <div class="cta-new-order" id="cta-modal" onclick="newOrder()" >
+        start new order
+      </div>
+    </div>
+  </div>
+</main>
+<script src="index.js"></script>
+</body>
+</html>
